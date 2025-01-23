@@ -1,0 +1,144 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+body {
+    background-color: #b0d8fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 350px; 
+    box-sizing: border-box;
+}
+
+
+header h2 {
+    text-align: center;
+    font-size: 1.6rem;  
+    color: #76e7f8; 
+    margin-bottom: 15px;  
+    font-weight: 600;
+}
+
+
+.currencyconverter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;  
+}
+
+.items label {
+    font-size: 1rem;  
+    color: #333; 
+    font-weight: bold;
+}
+
+.items select,
+.items input {
+    padding: 8px; 
+    font-size: 0.95rem;  
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.items select:focus,
+.items input:focus {
+    border-color: #0099cc; 
+    background-color: #ffffff;
+}
+
+
+#result {
+    font-weight: bold;
+    font-size: 1.1rem;  
+    color: #0099cc; 
+    text-transform: uppercase;
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+#convert {
+    padding: 10px 20px; 
+    background-color: #47f670; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#convert:hover {
+    background-color: #2cdb52; 
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; 
+        width: 90%;
+    }
+
+    header h2 {
+        font-size: 1.4rem; 
+    }
+
+    .items label,
+    .items select,
+    .items input {
+        font-size: 0.85rem;  
+    }
+
+    #convert {
+        padding: 8px 16px;  
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 20px;  
+        width: 75%; 
+    }
+
+    header h2 {
+        font-size: 1.5rem;  
+
+    .items label,
+    .items select,
+    .items input {
+        font-size: 0.95rem;  
+    }
+
+    #convert {
+        padding: 9px 18px;  
+        font-size: 1.05rem;
+    }
+}
