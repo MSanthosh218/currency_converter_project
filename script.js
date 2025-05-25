@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     convertButton.addEventListener("click", convertCurrency);
 
-   
+
     function getListOfCurrencies() {
         return fetch("https://api.frankfurter.app/currencies")
             .then(res => res.json());
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-   
+
     function convertCurrency() {
         const fromCurrency = document.getElementById("fromcurrrency").value;
         const toCurrency = document.getElementById("tocurrency").value;
@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(data => {
                 const conversionRate = data.rates[toCurrency];
-                const result = (amount * conversionRate).toFixed(2);
+                // console.log(conversionRate)
+                const result = (conversionRate).toFixed(2);
+                // console.log(result)
                 resultElement.textContent = result; // Display result in the span
             })
             .catch(err => {
@@ -47,6 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
-  
+
     buildCurrencyOptions();
 });
